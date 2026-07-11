@@ -1,0 +1,19 @@
+README.md
+  s_e8570e9a551830::t_e8859d18abcf82 1-7
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.6.12",
+  "base_commit_sha": "523034e08b5b3472175938a9469c4a7a6fd57e85",
+  "prompts": {},
+  "sessions": {
+    "s_e8570e9a551830": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "aa021fa2-36f5-4b8d-8a73-d81f6b2a3480",
+        "model": "claude-fable-5"
+      },
+      "human_author": "myaiplugins <info@myaiplugins.com>"
+    }
+  }
+}
