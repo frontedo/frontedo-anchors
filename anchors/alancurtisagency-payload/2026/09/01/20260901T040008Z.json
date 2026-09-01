@@ -1,0 +1,13 @@
+{
+  "schemaVersion": 1,
+  "installationId": "alancurtisagency-payload",
+  "entries": [
+    {
+      "tenantSlug": "acagency",
+      "anchoredCount": 21,
+      "headEventId": 21,
+      "headHash": "b2f2447f2223fdc9e931d6c05951fc23a9010e0b5f88e0dd68fe6f089b3801e9"
+    }
+  ],
+  "anchoredAt": "2026-09-01T04:00:08.052Z"
+}
