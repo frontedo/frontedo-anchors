@@ -1,0 +1,10 @@
+{
+  "schemaVersion": 1,
+  "installationId": "alancurtisagency-payload",
+  "entry": {
+    "anchoredCount": 782,
+    "headSeq": 782,
+    "headHash": "000b32bc69d879829391e71dcf2bee9f9e68f999a38a8c179a3821701658fc8e"
+  },
+  "anchoredAt": "2026-09-14T05:00:19.844Z"
+}
