@@ -1,0 +1,19 @@
+verificatore/LEGGIMI.md
+  s_56182a275dd57d::t_15eb128709ac34 20-23
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.4",
+  "base_commit_sha": "8d403e6d2912d55a7e71719318e0dbccab068122",
+  "prompts": {},
+  "sessions": {
+    "s_56182a275dd57d": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "2ecc3abf-9b6d-4a56-9e66-f84468de321b",
+        "model": "claude-opus-5-5"
+      },
+      "human_author": "Alan Curtis <info@myaiplugins.com>"
+    }
+  }
+}
