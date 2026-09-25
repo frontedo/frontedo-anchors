@@ -17,8 +17,10 @@ Non prova:
   successivo). Il verificatore la dichiara per ogni catena;
 - **una catena senza àncore**: le sue righe sono coerenti fra loro, ma chi custodisce il registro
   potrebbe averle riscritte tutte. Il verificatore lo riporta come esito a sé (exit 2), mai come verde;
-- **che si sia continuato ad ancorare**: il repository impedisce di riscrivere le àncore, non di
-  smettere di scriverle. Un'àncora vecchia di settimane è un fatto da notare;
+- **che si sia continuato ad ancorare**: il repository impedisce di riscrivere le àncore **di nascosto**,
+  non di smettere di scriverle. Il ramo rifiuta force-push e cancellazioni, e ogni modifica resterebbe nella
+  storia, che si legge con `git log -- <file>` (senza `--follow`, che scambia per copie àncore che si
+  somigliano). Un'àncora vecchia di settimane è un fatto da notare;
 - **le àncore recenti su un clone vecchio**: il repository va clonato al momento della verifica.
 
 ⚠️ Il file contiene **pseudonimi dei visitatori e indirizzi IP troncati**, che sono dati personali.
