@@ -1,0 +1,12 @@
+{
+  "schemaVersion": 2,
+  "installationRef": "e5c4cf7e02d473db642a63c3fc08994271d0dd6cc056b8576000c487f6f11762",
+  "pseudonymKeyId": "8cc4391d66e5994b",
+  "entries": [
+    {
+      "tenantRef": "f77fe68b36a55eb7b2840951fdcd99fb6a0cb48951860d9d2a690e1d311b2fc6",
+      "headHash": "e0db76dd4086a1ff8fc434fb3391b4ffd938b6983b04d4e292575cb1958c1fbd"
+    }
+  ],
+  "anchoredAt": "2026-10-02T04:00:07.243Z"
+}
