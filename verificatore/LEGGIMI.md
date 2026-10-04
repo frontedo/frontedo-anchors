@@ -103,6 +103,24 @@ Le righe di una catena sono consecutive e nell'ordine in cui sono state scritte.
 | `hash` | l'hash di questa riga |
 | `property` | l'id della Property che ha registrato l'evento (non entra nell'hash) |
 
+**Lo stesso evento può comparire due volte.** Il sito salva la scelta prima di inviarla, e la rimanda alla visita
+successiva se non ha avuto la conferma, per esempio quando la pagina si ricarica subito dopo un ritiro. Se il primo invio
+era arrivato e si è persa solo la risposta, il registro ne contiene due copie. La seconda ha `deferred: true` e la stessa
+`clientReportedAt` della prima. Non è una manomissione: le due righe sono anelli distinti e verificabili della catena, e
+dicono la stessa cosa.
+
+**In un ritiro, `bannerVersion` e `bannerTextHash` sono quelli che il sito dichiara**, cioè il banner che la persona aveva
+davanti quando ha ritirato. Possono non coincidere con il testo in vigore al momento della scrittura. Un consenso dato su un
+testo non più in vigore viene rifiutato, e il sito ripropone il banner. Un ritiro invece si accetta sempre, perché revocare
+dev'essere facile come dare il consenso (art. 7, par. 3, GDPR). Il registro **non verifica** che l'hash di un ritiro
+corrisponda a un testo pubblicato: è una dichiarazione del sito, non una prova. `providersHash` invece, nelle righe di versione 3,
+lo calcola sempre il registro, sulle dichiarazioni in vigore al momento della scrittura.
+
+**Lo stato di una persona si legge per istante della scelta, non per ordine di riga.** Un evento rimandato può arrivare
+dopo una scelta successiva della stessa persona: per esempio un ritiro rimasto in attesa mentre intanto ha dato un consenso
+nuovo. L'istante della scelta è `clientReportedAt` quando c'è, altrimenti `eventTimestamp`. L'ultima scelta è quella con
+l'istante più alto.
+
 ## La regola dell'hash
 
     hash = sha256_hex( UTF-8( prevHash + "|" + canonical ) )
